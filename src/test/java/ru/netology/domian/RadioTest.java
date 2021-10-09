@@ -48,11 +48,15 @@ class RadioTest {
     @Test
     public void nextFromFirstToLastStation() {
         Radio rad = new Radio();
-        rad.setCurrentStation(0);
-        for (int i = 0; i < 9; i++) {
-            rad.next();
-        }
-
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
         int actual = rad.getCurrentStation();
         int expected = 9;
         assertEquals(expected, actual);
@@ -61,13 +65,18 @@ class RadioTest {
     @Test
     public void nextCircleFromZeroToZeroStation() {
         Radio rad = new Radio();
-        rad.setCurrentStation(0);
-        for (int i = 0; i < 9; i++) {
-            rad.next();
-        }
-
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
+        rad.next();
         int actual = rad.getCurrentStation();
-        int expected = 9;
+        int expected = 0;
         assertEquals(expected, actual);
     }
 
@@ -104,9 +113,16 @@ class RadioTest {
     @Test
     public void prevCircleFromZeroToZeroStation() {
         Radio rad = new Radio();
-        for (int i = 0; i < 10; i++) {
-            rad.prev();
-        }
+        rad.prev();
+        rad.prev();
+        rad.prev();
+        rad.prev();
+        rad.prev();
+        rad.prev();
+        rad.prev();
+        rad.prev();
+        rad.prev();
+        rad.prev();
         int actual = rad.getCurrentStation();
         int expected = 0;
         assertEquals(expected, actual);
@@ -124,9 +140,15 @@ class RadioTest {
     @Test
     public void increaseVolumeToNine() {
         Radio rad = new Radio();
-        for (int i = 0; i < 9; i++) {
-            rad.increaseVolume();
-        }
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
         int actual = rad.getCurrentVolume();
         int expected = 9;
         assertEquals(expected, actual);
@@ -135,9 +157,16 @@ class RadioTest {
     @Test
     public void increaseVolumeToMax() {
         Radio rad = new Radio();
-        for (int i = 0; i < 10; i++) {
-            rad.increaseVolume();
-        }
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
         int actual = rad.getCurrentVolume();
         int expected = 10;
         assertEquals(expected, actual);
@@ -146,9 +175,21 @@ class RadioTest {
     @Test
     public void increaseVolumeOverThanMax() {
         Radio rad = new Radio();
-        for (int i = 0; i < 15; i++) {
-            rad.increaseVolume();
-        }
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
         int actual = rad.getCurrentVolume();
         int expected = 10;
         assertEquals(expected, actual);
@@ -168,9 +209,14 @@ class RadioTest {
     @Test
     public void reduceVolumeEightTimesFromZero() {
         Radio rad = new Radio();
-        for (int i = 0; i < 8; i++) {
-            rad.reduceVolume();
-        }
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
         int actual = rad.getCurrentVolume();
         int expected = 0;
         assertEquals(expected, actual);
@@ -179,12 +225,26 @@ class RadioTest {
     @Test
     public void reduceVolumeFromMaxToZero() {
         Radio rad = new Radio();
-        for (int i = 0; i < 10; i++) {
-            rad.increaseVolume();
-        }
-        for (int i = 0; i < 10; i++) {
-            rad.reduceVolume();
-        }
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.increaseVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
+        rad.reduceVolume();
         int actual = rad.getCurrentVolume();
         int expected = 0;
         assertEquals(expected, actual);
