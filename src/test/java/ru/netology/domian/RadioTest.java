@@ -48,14 +48,7 @@ class RadioTest {
     @Test
     public void nextFromFirstToLastStation() {
         Radio rad = new Radio();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
+        rad.setCurrentStation(8);
         rad.next();
         int actual = rad.getCurrentStation();
         int expected = 9;
@@ -63,17 +56,9 @@ class RadioTest {
     }
 
     @Test
-    public void nextCircleFromZeroToZeroStation() {
+    public void nextFromNineToZeroStation() {
         Radio rad = new Radio();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
-        rad.next();
+        rad.setCurrentStation(9);
         rad.next();
         int actual = rad.getCurrentStation();
         int expected = 0;
@@ -111,17 +96,9 @@ class RadioTest {
     }
 
     @Test
-    public void prevCircleFromZeroToZeroStation() {
+    public void prevFromOneToZeroStation() {
         Radio rad = new Radio();
-        rad.prev();
-        rad.prev();
-        rad.prev();
-        rad.prev();
-        rad.prev();
-        rad.prev();
-        rad.prev();
-        rad.prev();
-        rad.prev();
+        rad.setCurrentStation(1);
         rad.prev();
         int actual = rad.getCurrentStation();
         int expected = 0;
