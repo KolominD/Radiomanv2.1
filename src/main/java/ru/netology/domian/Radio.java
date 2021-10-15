@@ -11,6 +11,15 @@ public class Radio {
     public int getCurrentVolume() {
         return currentVolume;
     }
+    public void setCurrentVolume(int newCurrentVolume){
+        if (newCurrentVolume < minVolume){
+            return;
+        }
+        if (newCurrentVolume > maxVolume){
+            return;
+        }
+        currentVolume = newCurrentVolume;
+    }
 
     public int getCurrentStation() {
         return currentStation;
