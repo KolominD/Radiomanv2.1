@@ -3,10 +3,24 @@ package ru.netology.domian;
 public class Radio {
     public int currentStation;
     public int firstStation = 0;
-    public int lastStation = 9;
-    public int maxVolume = 10;
+    public int maxVolume = 100;
     public int minVolume = 0;
     public int currentVolume;
+    public int countStation = 10;
+    public int lastStation = countStation - 1;
+
+    public Radio(int currentStation, int firstStation, int lastStation, int countStation, int maxVolume, int minVolume, int currentVolume) {
+        this.currentStation = currentStation;
+        this.firstStation = firstStation;
+        this.lastStation = lastStation;
+        this.countStation = countStation;
+        this.maxVolume = maxVolume;
+        this.minVolume = minVolume;
+        this.currentVolume = currentVolume;
+    }
+
+    public Radio() {
+    }
 
     public int getCurrentVolume() {
         return currentVolume;
