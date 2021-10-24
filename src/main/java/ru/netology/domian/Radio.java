@@ -9,14 +9,8 @@ public class Radio {
     public int countStation = 10;
     public int lastStation = countStation - 1;
 
-    public Radio(int currentStation, int firstStation, int lastStation, int countStation, int maxVolume, int minVolume, int currentVolume) {
-        this.currentStation = currentStation;
-        this.firstStation = firstStation;
-        this.lastStation = lastStation;
+    public Radio(int countStation) {
         this.countStation = countStation;
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-        this.currentVolume = currentVolume;
     }
 
     public Radio() {
